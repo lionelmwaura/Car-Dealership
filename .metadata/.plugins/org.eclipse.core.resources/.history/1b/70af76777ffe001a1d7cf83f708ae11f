@@ -1,0 +1,81 @@
+package com.servlet;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.car.Camry;
+import com.car.Car;
+import com.car.Corolla;
+
+
+/**
+ * Servlet implementation class SearchInventoryServlet
+ */
+@WebServlet("/SearchInventoryServlet")
+public class SearchInventoryServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public SearchInventoryServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		HttpSession session = request.getSession(true);
+		//Check if the array is null
+		ArrayList<Car> cars = (ArrayList<Car>)session.getAttribute("cars");;
+		if(cars == null) {
+			cars = new ArrayList<Car>();
+		}
+		
+		// create car inventory
+		//Camry:
+		Camry camry1 = new Camry(4, 32000, 2020, null, false, "Red", "Sedan", "312488");
+		cars.add(camry1);
+					
+		Camry camry2 = new Camry(2300, 24200, 2018, null, false, "Blue", "Sedan", "312489");
+		cars.add(camry2);
+					
+		Camry camry3 = new Camry(13400, 16320, 2016, null, false, "Gray", "Sedan", "312490");
+		cars.add(camry3);
+					
+		//Corolla:
+		Corolla corolla1 = new Corolla( 13, 19300, 2020, null, false, "White", "Hatchback", "217003");
+		cars.add(corolla1);
+					
+		Corolla corolla2 = new Corolla( 24, 19600, 2021, null, false, "green", "Com-Sedan", "217004");
+		cars.add(corolla2);
+					
+		Corolla corolla3 = new Corolla( 23453, 13200, 2017, null, false, "Black", "Com-Sedan", "217005");
+		cars.add(corolla3);
+		
+		
+		session.setAttribute("cars", cars);
+		RequestDispatcher rs = request.getRequestDispatcher("searchCar.jsp");
+		  rs.forward(request,response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

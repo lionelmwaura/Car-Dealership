@@ -1,0 +1,15 @@
+127.0.0.1 - - [22/Sep/2020:13:23:28 -0500] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [22/Sep/2020:13:23:29 -0500] "GET /CarDealership/ HTTP/1.1" 200 2036
+0:0:0:0:0:0:0:1 - - [22/Sep/2020:13:23:29 -0500] "GET /CarDealership/cover.css HTTP/1.1" 404 778
+0:0:0:0:0:0:0:1 - - [22/Sep/2020:13:23:29 -0500] "GET /CarDealership/styles/styles.css HTTP/1.1" 200 45
+0:0:0:0:0:0:0:1 - - [22/Sep/2020:13:23:31 -0500] "GET /CarDealership/toyota.jsp HTTP/1.1" 200 2481
+0:0:0:0:0:0:0:1 - - [22/Sep/2020:13:23:31 -0500] "GET /CarDealership/carousel.css HTTP/1.1" 404 781
+0:0:0:0:0:0:0:1 - - [22/Sep/2020:13:23:33 -0500] "GET /CarDealership/SearchInventoryServlet HTTP/1.1" 500 3850
+0:0:0:0:0:0:0:1 - - [22/Sep/2020:13:47:58 -0500] "GET /CarDealership/SearchInventoryServlet HTTP/1.1" 500 4035
+127.0.0.1 - - [22/Sep/2020:19:02:32 -0500] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [22/Sep/2020:19:02:33 -0500] "GET /CarDealership/ HTTP/1.1" 200 2036
+0:0:0:0:0:0:0:1 - - [22/Sep/2020:19:02:33 -0500] "GET /CarDealership/cover.css HTTP/1.1" 404 778
+0:0:0:0:0:0:0:1 - - [22/Sep/2020:19:02:35 -0500] "GET /CarDealership/toyota.jsp HTTP/1.1" 200 2481
+0:0:0:0:0:0:0:1 - - [22/Sep/2020:19:02:35 -0500] "GET /CarDealership/carousel.css HTTP/1.1" 404 781
+0:0:0:0:0:0:0:1 - - [22/Sep/2020:19:02:38 -0500] "GET /CarDealership/SearchInventoryServlet HTTP/1.1" 200 4151
+0:0:0:0:0:0:0:1 - - [22/Sep/2020:19:02:38 -0500] "GET /CarDealership/carousel.css HTTP/1.1" 404 781

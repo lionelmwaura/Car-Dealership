@@ -1,0 +1,67 @@
+package com.car;
+
+import java.util.ArrayList;
+import java.util.Date;
+
+public abstract class Car {
+
+	//Variables needed to create a car 
+	protected String model;
+	protected String make;
+	protected int miles;
+	protected double price;
+	protected int year;
+	protected Date inDate;
+	protected boolean bought;
+	protected String color;
+	protected String carType;
+	private String vId;
+	
+	public Car(String make, String model, int miles, double price, int year, Date inDate, boolean bought, String color, String carType, long vId) {
+		this.bought = bought;
+		this.inDate = inDate;
+		this.make = make;
+		this.miles = miles;
+		this.model = model;
+		this.price = price;
+		this.year = year;
+		this.color = color;
+		this.carType = carType;
+		
+	}
+	
+	//Getters
+	public String getModel() {
+		return model;
+	}
+	public String getMake() {
+		return make;
+	}
+	public int getMiles() {
+		return miles;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public int getYear() {
+		return year;
+	}
+	public Date getInDate() {
+		return inDate;
+	}
+	public boolean isBought() {
+		return bought;
+	}
+	public String getColor() {
+		return color;
+	}
+	public  String getCarType() {
+		return carType;
+	}
+	public String getvId() {
+		return vId;
+	}
+
+	
+	
+}

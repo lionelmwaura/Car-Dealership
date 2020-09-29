@@ -1,0 +1,33 @@
+package com.car;
+
+import com.customer.Customer;
+
+public class Report {
+	
+	private Car car;
+	private Customer customer;
+	
+	public Report() {
+		
+	}
+
+	public Car getCar() {
+		return car;
+	}
+
+	public void setCar(Car car) {
+		this.car = car;
+	}
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+	
+	
+	
+	
+}

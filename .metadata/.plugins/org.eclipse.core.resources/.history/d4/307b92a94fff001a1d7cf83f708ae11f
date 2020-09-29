@@ -1,0 +1,81 @@
+package com.servlet;
+
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.car.Car;
+
+/**
+ * Servlet implementation class BiddingServlet
+ */
+@WebServlet("/BiddingServlet")
+public class BiddingServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public BiddingServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession(true);
+		Car car = (Car)session.getAttribute("car");;
+		
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/DD/YYYY");
+		 
+		//LocalDateTime now = LocalDateTime.now();
+		//LocalDateTime inDate = LocalDateTime.parse(car.getInDate(), formatter);
+		
+		//long diff = ChronoUnit.SECONDS.between(now, inDate);
+		String vId = request.getParameter("Id");
+		
+		double price = car.getPrice();
+		double currentBid = car.getBid();
+		double bid = 0;
+		
+		bid = Double.parseDouble(request.getParameter("bid"));
+		
+		/*
+		 * if(diff >= 120) { price = price * .9; }
+		 */
+		
+		if (currentBid <= price) {
+			if (bid > currentBid) {
+				car.setBid(bid);
+			}
+		}
+		
+		session.setAttribute("car", car);
+		RequestDispatcher rs = request.getRequestDispatcher("viewDetails.jsp");
+		  rs.forward(request,response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

@@ -1,0 +1,8 @@
+127.0.0.1 - - [18/Sep/2020:12:42:23 -0500] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [18/Sep/2020:12:42:24 -0500] "GET /CarDealership/ HTTP/1.1" 200 2036
+0:0:0:0:0:0:0:1 - - [18/Sep/2020:12:42:24 -0500] "GET /CarDealership/styles/styles.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [18/Sep/2020:12:42:24 -0500] "GET /CarDealership/cover.css HTTP/1.1" 404 778
+0:0:0:0:0:0:0:1 - - [18/Sep/2020:12:42:40 -0500] "GET /CarDealership/toyota.jsp HTTP/1.1" 200 2472
+0:0:0:0:0:0:0:1 - - [18/Sep/2020:12:42:40 -0500] "GET /CarDealership/carousel.css HTTP/1.1" 404 781
+0:0:0:0:0:0:0:1 - - [18/Sep/2020:12:42:43 -0500] "GET /CarDealership/searchCar.jsp HTTP/1.1" 200 2860
+0:0:0:0:0:0:0:1 - - [18/Sep/2020:12:42:43 -0500] "GET /CarDealership/carousel.css HTTP/1.1" 404 781

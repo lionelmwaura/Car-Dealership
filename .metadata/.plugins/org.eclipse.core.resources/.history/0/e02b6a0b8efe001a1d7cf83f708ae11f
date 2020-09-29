@@ -1,0 +1,12 @@
+package com.car;
+
+import java.util.Date;
+
+public class Camry extends Toyota{
+	
+	
+	public Camry( int miles, double price, int year, Date inDate, boolean bought, String color, String carType, String vId) {
+		super("Camry", miles, price, year, inDate, bought, color, carType, vId);
+	}
+
+}

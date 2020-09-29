@@ -1,0 +1,43 @@
+package com.car;
+
+import java.util.ArrayList;
+
+public class Inventory {
+	
+	private ArrayList<Car> cars;
+	
+	/*public ArrayList<Car> Invetory() {
+		// create car inventory
+		//Camry:
+		Camry camry1 = new Camry(4, 32000, 2020, null, false, "Red", "Sedan", "312488");
+		cars.add(camry1);
+							
+		Camry camry2 = new Camry(2300, 24200, 2018, null, false, "Blue", "Sedan", "312489");
+		cars.add(camry2);
+							
+		Camry camry3 = new Camry(13400, 16320, 2016, null, false, "Green", "Sedan", "312490");
+		cars.add(camry3);
+							
+		//Corolla:
+		Corolla corolla1 = new Corolla( 13, 19300, 2020, null, false, "White", "Hatchback", "217003");
+		cars.add(corolla1);
+							
+		Corolla corolla2 = new Corolla( 24, 19600, 2021, null, false, "green", "Com-Sedan", "217004");
+		cars.add(corolla2);
+							
+		Corolla corolla3 = new Corolla( 23453, 13200, 2017, null, false, "Black", "Com-Sedan", "217005");
+		cars.add(corolla3);
+	}*/
+
+	public ArrayList<Car> getCars() {
+		return cars;
+	}
+	public void setCars(ArrayList<Car> cars) {
+		this.cars = cars;
+	}
+	
+	
+	
+	
+
+}
